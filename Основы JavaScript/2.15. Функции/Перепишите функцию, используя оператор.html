@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Перепишите функцию, используя оператор '?' или '||'</title>
+</head>
+<body>
+<script>
+    function checkAge1(age) {
+        return age > 18 ? true : confirm('Родители разрешили?')
+    }
+
+    function checkAge2(age) {
+        return age > 18 || confirm('Родители разрешили?')
+    }
+
+    alert(checkAge1(15))
+</script>
+</body>
+</html>

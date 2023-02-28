@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>День недели в европейской нумерации</title>
+</head>
+<body>
+<script>
+
+    let date = new Date(2012, 0, 3)
+    alert(getLocalDay(date))
+
+    function getLocalDay(date) {
+        return date.getDay() || 7
+    }
+
+</script>
+</body>
+</html>

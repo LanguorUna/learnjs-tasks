@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Последнее число месяца?</title>
+</head>
+<body>
+<script>
+
+    alert(getLastDayOfMonth(2012, 1))
+
+    function getLastDayOfMonth(year, month){
+        const date = new Date(year, month + 1)
+        date.setDate(0)
+        return date.getDate()
+    }
+
+</script>
+</body>
+</html>

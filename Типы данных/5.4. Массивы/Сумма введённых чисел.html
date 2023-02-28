@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сумма введённых чисел</title>
+</head>
+<body>
+<script>
+
+    function sumInput() {
+        const values = []
+        let value = prompt('Введите число', '')
+
+        while (value && Number.isFinite(+value)){
+            values.push(+value)
+            value = prompt('Введите число', '')
+        }
+
+        return values.reduce((sum, current) => sum + current, 0)
+    }
+
+    alert(`Сумма чисел = ${sumInput()}`)
+
+</script>
+</body>
+</html>

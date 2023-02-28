@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вывести простые числа</title>
+</head>
+<body>
+<script>
+
+    const from = +prompt('Введите начало интервала', '2')
+    const to = +prompt('Введите конец интервала', '10')
+
+    const result = []
+
+    for (let i = from; i <= to; i++) {
+        if (isPrime(i)) {
+            result.push(i)
+        }
+    }
+
+    alert(`Простые числа в интервале от ${from} до ${to}:\n${result}`)
+
+    function isPrime(n) {
+        if (n === 2 || n === 3)
+            return true
+        if (n % 2 === 0)
+            return false
+
+        let divisor = 3
+        const limit = Math.sqrt(n)
+        while (divisor <= limit) {
+            if (n % divisor === 0)
+                return false
+            else
+                divisor += 2
+        }
+        return true
+    }
+</script>
+</body>
+</html>

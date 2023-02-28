@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ввод числового значения</title>
+</head>
+<body>
+<script>
+
+    function readNumber() {
+        let value
+        let num
+        do {
+            value = prompt('Введите число', '0')
+            num = +value
+        } while (value && Number.isNaN(num))
+
+        return value ? num : null
+    }
+
+    alert(readNumber())
+
+</script>
+</body>
+</html>

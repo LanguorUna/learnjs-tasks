@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Напишите "if", аналогичный "switch</title>
+</head>
+<body>
+<script>
+    const browser = 'Edge'
+
+    const supportBrowsers = ['Chrome', 'Firefox', 'Safari', 'Opera']
+
+    if (browser === 'Edge') {
+        alert("You've got the Edge!")
+    } else if (supportBrowsers.includes(browser)) {
+        alert('Okay we support these browsers too')
+    } else {
+        alert('We hope that this page looks ok!')
+    }
+
+</script>
+</body>
+</html>

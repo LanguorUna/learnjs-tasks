@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Форматирование относительной даты</title>
+</head>
+<body>
+<script>
+
+    function formatDate(date) {
+        const diff = new Date() - date
+        if (diff < 1000) {
+            return 'прямо сейчас'
+        }
+
+        const sec = Math.trunc(diff / 1000)
+        if (sec < 60) {
+            return sec + ' сек. назад'
+        }
+
+        const min = Math.trunc(diff / 60000)
+        if (min < 60) {
+            return min + ' мин. назад'
+        }
+
+        const [y, m, d, h, mm] = [
+            date.getDate(),
+            (date.getMonth() + 1),
+            date.getFullYear(),
+            date.getHours(),
+            date.getMinutes()
+        ].map(component => component.toString().padStart(2, '0'))
+
+        return `${y}.${m}.${d} ${h}:${mm}`
+    }
+
+    alert(formatDate(new Date(new Date - 1)))
+    alert(formatDate(new Date(new Date - 30 * 1000)))
+    alert(formatDate(new Date(new Date - 5 * 60 * 1000)))
+    alert(formatDate(new Date(new Date - 86400 * 1000)))
+
+</script>
+</body>
+</html>

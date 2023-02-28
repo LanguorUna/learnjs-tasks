@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой день месяца был много дней назад?</title>
+</head>
+<body>
+<script>
+
+    let date = new Date(2015, 0, 2)
+
+    alert(getDateAgo(date, 1))
+    alert(getDateAgo(date, 2))
+    alert(getDateAgo(date, 365))
+
+    function getDateAgo(date, days) {
+        const copyDate = new Date(date)
+        copyDate.setDate(copyDate.getDate() - days)
+        return copyDate.getDate()
+    }
+
+</script>
+</body>
+</html>

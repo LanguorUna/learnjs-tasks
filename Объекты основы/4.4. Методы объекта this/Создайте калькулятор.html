@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создайте калькулятор</title>
+</head>
+<body>
+<script>
+    const calculator = {
+        value1: undefined,
+        value2: undefined,
+
+        read() {
+            this.value1 = +prompt('Введите первое число', '0')
+            this.value2 = +prompt('Введите второе число', '0')
+        },
+
+        sum() {
+            return this.value1 + this.value2
+        },
+
+        mul() {
+            return this.value1 * this.value2
+        }
+    }
+
+    calculator.read()
+    alert(`Сумма чисел ${calculator.value1} и ${calculator.value2} = ${calculator.sum()}`)
+    alert(`Произведение чисел ${calculator.value1} и ${calculator.value2} = ${calculator.mul()}`)
+
+</script>
+</body>
+</html>

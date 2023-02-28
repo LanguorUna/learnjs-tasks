@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Сколько секунд осталось до завтра?</title>
+</head>
+<body>
+<script>
+
+    alert(getSecondsToTomorrow(new Date(2023, 1, 19, 23)))
+
+    function getSecondsToTomorrow(date = new Date()) {
+        const tomorrow = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1)
+
+        return Math.trunc((tomorrow.getTime() - date.getTime()) / 1000)
+    }
+
+</script>
+</body>
+</html>
