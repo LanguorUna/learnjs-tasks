@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вывод каждую секунду</title>
+</head>
+<body>
+<script>
+    function printNumbers1(from, to) {
+        let current = from
+
+        const timerId = setInterval(function () {
+            alert(current)
+            if (current === to) {
+                clearInterval(timerId)
+            }
+            current++
+        }, 1000)
+    }
+
+    //printNumbers1(5, 10)
+
+
+    function printNumbers2(from, to) {
+        let current = from
+
+        setTimeout(function go() {
+            alert(current)
+            if (current < to) {
+                setTimeout(go, 1000)
+            }
+            current++
+        }, 1000)
+    }
+
+    printNumbers2(5, 10)
+
+</script>
+</body>
+</html>

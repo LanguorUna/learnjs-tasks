@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Дочерние элементы в DOM</title>
+</head>
+<body>
+<div>Пользователи:</div>
+<ul>
+    <li>Джон</li>
+    <li>Пит</li>
+</ul>
+<script>
+    //элемент <div>
+   document.body.firstChild
+
+    //элемент <ul>
+    document.body.lastElementChild
+
+    //элемент <li> (с именем Пит)
+    document.body.lastElementChild.lastElementChild
+
+</script>
+</body>
+</html>
